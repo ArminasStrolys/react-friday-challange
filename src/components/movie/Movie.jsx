@@ -11,3 +11,7 @@ const Movie = (props) => {
 }
 
 export default Movie;
+
+
+// https://www.themoviedb.org/settings/api
+// https://developers.themoviedb.org/3/getting-started/search-and-query-for-details
