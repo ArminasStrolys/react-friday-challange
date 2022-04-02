@@ -1,0 +1,20 @@
+.dropList {
+    display: block;
+  background-color: $whiteish;
+  padding: 20px;
+  transition: 0.1s;
+  color: $blackish;
+  &:hover {
+    background-color: $red2;
+    color: $whiteish;
+  }
+}
+
+.dropText {
+  color: $blackish;
+  font-weight: 800;
+  font-size: 17px;
+}
+
+.rating {
+}
