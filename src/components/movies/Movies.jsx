@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Movie from "../movie/Movie";
 import api from '../../utilities/Api_key'
 
-
 const Movies = (props) => {
   const [films, setFilms] = useState([]);
 
@@ -13,7 +12,7 @@ const Movies = (props) => {
       .then((res) => res.json())
       .then((data) => setFilms(data.results))
       .catch((error) => console.log(error));
-  }, []);
+  }, [props.item]);
 {console.log(props.item)}
   return (
     <>
@@ -24,7 +23,7 @@ const Movies = (props) => {
           description={film.overview}
           poster={film.poster_path}
           rating={film.vote_average}
-          year={film.release_date.slice(0,4)}
+          year={film.release_date}
         />))}
       </div>
     </>
