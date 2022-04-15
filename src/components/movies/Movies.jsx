@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Movie from "../movie/Movie";
+import Singlemovie from "../singleMovie/SingleMovie";
 import api from '../../utilities/Api_key'
 
 const Movies = (props) => {
@@ -13,7 +14,8 @@ const Movies = (props) => {
       .then((data) => setFilms(data.results))
       .catch((error) => console.log(error));
   }, [props.item]);
-{console.log(props.item)}
+console.log(props.item)
+films.splice(5)
   return (
     <>
       <div>

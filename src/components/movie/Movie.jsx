@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
-import api from '../../utilities/Api_key'
-import Singlemovie from '../singleMovie/SingleMovie';
 
 const Movie = (props) => {
     const [hide, setHide] = ('')
+    // const hanldeSomething = (e) => {
+    //     console.log(e.target.parentElement.lastChild.innerText)
+    // }
     return (
-        <span onClick={() => setHide(props.poster)}  className='dropList'>
+        <div onClick={(e)=>console.log(props.poster)} className='dropList'>
             <p className='dropText'>{props.title}</p>
             <p className='rating'>{props.rating} Rating, {props.year}</p>
-        </span>
+            <span style={{display:'none'}}>{props.poster}</span>
+            {/* {console.log(hide)} */}
+        </div>
     );
 }
 
