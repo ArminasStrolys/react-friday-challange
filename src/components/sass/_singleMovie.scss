@@ -44,4 +44,11 @@ body {
   transform: translate(-50%, -50%);
 }
 
-// @media
+@media (max-width: 850px) {
+  .poster {
+    position: relative;
+  }
+  .posterInfo {
+    margin-left: 0;
+  }
+}
