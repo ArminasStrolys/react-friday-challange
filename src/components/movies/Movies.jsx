@@ -5,15 +5,24 @@ import SingleMovie from "../singleMovie/SingleMovie";
 
 const Movies = (props) => {
   const [films, setFilms] = useState([]);
-  const [data, setData] = useState("");
+  const [data, setData] = useState({
+    title: "",
+    lang: "",
+    rating: "",
+    votes: "",
+    desc: "",
+    poster: "",
+    years: "",
+  });
   const [show, setShow] = useState("true");
 
   const visible = () => {
     show === true ? setShow(false) : setShow(true);
   };
 
-  const getData = (dat) => {
-    setData(dat);
+  const getData = (data) => {
+    setData(data);
+    console.log("data: ", data);
   };
 
   useEffect(() => {
@@ -25,7 +34,7 @@ const Movies = (props) => {
       .catch((error) => console.log(error));
   }, [props.item]);
 
-  films.splice(5);
+  films.splice(8);
 
   return (
     <>
@@ -34,6 +43,8 @@ const Movies = (props) => {
           <Movie
             key={film.id}
             title={film.title}
+            lang={film.original_language}
+            votes={film.vote_count}
             description={film.overview}
             poster={film.poster_path}
             rating={film.vote_average}
@@ -44,7 +55,17 @@ const Movies = (props) => {
             inVisible={visible}
           />
         ))}
-        <SingleMovie poster={data} visible={show} inVisible={visible} />
+        <SingleMovie
+          years={data.years}
+          poster={data.poster}
+          title={data.title}
+          lang={data.lang}
+          rating={data.rating}
+          votes={data.votes}
+          desc={data.desc}
+          visible={show}
+          inVisible={visible}
+        />
       </div>
     </>
   );

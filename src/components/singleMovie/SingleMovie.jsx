@@ -1,37 +1,38 @@
 import React from "react";
+import logo2 from "../sass/source/star.svg";
 
 const SingleMovie = (props) => {
-  // const handleShow = () => {
-  //     style={{display}}
-  // }
-
-  console.log(props.show);
-  // console.log(props.poster)
-
   const showModal = () => {
-    props.inVisible()
-    // props.clear();
-    // <SingleMovie show={show} poster={`https://image.tmdb.org/t/p/w300${props.poster}`} />
+    props.inVisible();
   };
 
   return (
-    <div style={{display:props.visible === true ? 'block' : 'none'}} onClick={showModal} className="singleMovie">
-      {/* <div style={{display:'none'}} className='singleMovie'> */}
+    <div
+      style={{ display: props.visible === true ? "block" : "none" }}
+      onClick={showModal}
+      className="singleMovie"
+    >
       <div className="poster">
         <img src={props.poster} alt="This movie has no poster" />
       </div>
       <div className="posterInfo">
-        <h2>Movie title(years)</h2>
-        <i>Original language: (lang)</i>
+        <h2>
+          {props.title} ({props.years.slice(0, 4)})
+        </h2>
+        <i>Original language: <span className="upper">{props.lang}</span></i>
         <br />
         <br />
         <div>
-            star logo
-            (rating)
-            (num) votes
+          <img className="logo2" src={logo2} alt="logo" />
+          <br />
+          <div className="ratings">
+            <span className="rate">{props.rating}</span>/10
+            <br />
+            <span className="votes">{props.votes} votes</span>
+          </div>
         </div>
         <br />
-        <p className="lines">(description description description description description description description description description description description description description description description description description description description description description description description description description description description description description)</p>
+        <p className="lines">{props.desc}</p>
       </div>
     </div>
   );

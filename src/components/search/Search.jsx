@@ -6,16 +6,21 @@ const Search = () => {
   const [item, setItem] = useState("");
 
   const handleClear = () => {
-    setItem('')
-    console.log(item)
-  }
+    setItem("");
+    console.log(item);
+  };
 
   return (
     <div className="search">
       <form>
         <div className="anchor">
           <a href="/">
-            <img className="logo1" src={logo1} alt="logo" onClick={handleClear} />
+            <img
+              className="logo1"
+              src={logo1}
+              alt="logo"
+              onClick={handleClear}
+            />
           </a>
 
           <input
@@ -26,7 +31,6 @@ const Search = () => {
           />
 
           {item.length > 2 && <Movies item={item} clear={handleClear} />}
-
         </div>
       </form>
     </div>

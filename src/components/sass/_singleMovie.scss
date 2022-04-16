@@ -1,20 +1,47 @@
-.singleMovie{
-    margin: 100px 10% 0 0;
-    width: 100%;
+.singleMovie {
+  margin: 100px 10% 0 0;
+  width: 100%;
 }
-.poster{
-position: absolute;
+.poster {
+  position: absolute;
 }
-.posterInfo{
-    position: relative;
-    margin-left: 350px;
+.posterInfo {
+  position: relative;
+  margin-left: 350px;
 }
-.lines{
-    line-height: 25px;
+.upper {
+  text-transform: uppercase;
+}
+.lines {
+  line-height: 35px;
 }
 
-body{
-    background-color: bisque;
+body {
+  background-color: bisque;
+}
+.ratings {
+  position: absolute;
+  margin-left: 70px;
+  top: 90px;
+}
+.rate {
+  font-weight: 700;
+  font-size: 20px;
+}
+.votes {
+  color: $grayish;
 }
 
-// @media 
+.logo2 {
+  color: $white;
+  width: 50px;
+  position: relative;
+  filter: invert(80%) sepia(58%) saturate(830%) hue-rotate(356deg)
+    brightness(98%) contrast(106%);
+  z-index: 1;
+  top: 25px;
+  left: 25px;
+  transform: translate(-50%, -50%);
+}
+
+// @media
