@@ -1,6 +1,20 @@
 .singleMovie{
-    margin: 50px;
+    margin: 100px 10% 0 0;
+    width: 100%;
 }
+.poster{
+position: absolute;
+}
+.posterInfo{
+    position: relative;
+    margin-left: 350px;
+}
+.lines{
+    line-height: 25px;
+}
+
 body{
     background-color: bisque;
 }
+
+// @media 

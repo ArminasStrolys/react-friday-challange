@@ -5,12 +5,17 @@ import Movies from "../movies/Movies";
 const Search = () => {
   const [item, setItem] = useState("");
 
+  const handleClear = () => {
+    setItem('')
+    console.log(item)
+  }
+
   return (
     <div className="search">
       <form>
         <div className="anchor">
           <a href="/">
-            <img className="logo1" src={logo1} alt="logo" />
+            <img className="logo1" src={logo1} alt="logo" onClick={handleClear} />
           </a>
 
           <input
@@ -20,7 +25,8 @@ const Search = () => {
             placeholder="Search"
           />
 
-          {item.length > 2 && <Movies item={item} />}
+          {item.length > 2 && <Movies item={item} clear={handleClear} />}
+
         </div>
       </form>
     </div>
