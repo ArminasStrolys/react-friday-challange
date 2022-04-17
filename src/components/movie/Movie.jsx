@@ -23,7 +23,7 @@ const Movie = (props) => {
       >
         <p className="dropText">{props.title}</p>
         <p className="rating">
-          {props.rating} Rating, {props.year.slice(0, 4)}
+          {props.rating} Rating, {props.year && props.year.slice(0, 4)}
         </p>
       </div>
     </>
